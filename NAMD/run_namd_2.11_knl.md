@@ -6,6 +6,24 @@ Instructions on how to run NAMD 2.11 on ARCHER KNL.
 This document assumes you have built a copy of NAMD 2.11 according to the 
 instructions at [NAMD 2.11 ARCHER KNL Build Instructions](build_namd_2.11_knl.md).
 
+Modules and Environment Required
+--------------------------------
+
+In your job submission script you should load the following modules
+
+```bash
+module swap PrgEnv-cray PrgEnv-intel
+module load rca
+module load craype-hugepages8M
+```
+
+and set the following environment variables:
+
+```bash
+setenv HUGETLB_DEFAULT_PAGE_SIZE 8M
+setenv HUGETLB_MORECORE no
+```
+
 Specifying process/thread placement
 -----------------------------------
 
