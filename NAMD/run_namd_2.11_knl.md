@@ -13,8 +13,7 @@ When running NAMD on ARCHER KNL you will need to specify how to place the thread
 and processes. You should always aim to use NAMD on KNL with both MPI processes
 and OpenMP threads.
 
-Example: 16 threads per process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Example: 16 threads per process ###
 
 A good first place to start with benchmarking is to use 4 MPI processes per 
 KNL node with 16 OpenMP threads per process. (Remember that a KNL node
@@ -57,8 +56,7 @@ export NAMD_DIR=/work/knl-users/aturner/NAMD/NAMD_2.11_Source/CRAY-XC-intel
 # you should replace "input.namd" in the line below with your input filename
 aprun -n 8 -N 4 -d 16 -cc depth $NAMDDIR/namd2 +ppn 15 +pemap 1-15,17-31,33-47,49-63 +commap 0,16,32,48 input.namd
 ```
-Example: 64 threads per process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Example: 64 threads per process ###
 
 As the KNL nodes allow up to 4 hyperthreads per core, you can use a maximum of 256
 processes/threads per node. For two nodes with 4 processes per node and 64 threads
