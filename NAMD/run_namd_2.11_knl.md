@@ -66,4 +66,6 @@ per process we would use the following launch line:
 aprun -n 8 -N 4 -d 64 -j 4 -cc depth $NAMD_DIR/namd2 +ppn 63 +pemap 1-63,65-127,129-191,193-255 +commap 0,64,128,192 input.namd
 ```
 
+Note the addition of the `-j 4` option to `aprun` to specify 4 hyperthreads per core.
+
 The rest of the job submission script would be identical to that above.
