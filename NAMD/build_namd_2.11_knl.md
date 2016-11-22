@@ -61,3 +61,5 @@ gmake -j16
 
 This will create the executable `namd2` in the CRAY-XC-intel directory.
 
+You should now read the [NAMD 2.11 ARCHER KNL Run Instructions](run_namd_2.11_knl.md) to find out how to run
+the program.
