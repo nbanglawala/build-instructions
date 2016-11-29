@@ -20,8 +20,8 @@ module load craype-hugepages8M
 and set the following environment variables:
 
 ```bash
-setenv HUGETLB_DEFAULT_PAGE_SIZE 8M
-setenv HUGETLB_MORECORE no
+export HUGETLB_DEFAULT_PAGE_SIZE=8M
+export HUGETLB_MORECORE=no
 ```
 
 Specifying process/thread placement
@@ -44,7 +44,7 @@ For example, to use 2 KNL nodes we would have 8 MPI processes (4 per node)
 and 16 OpenMP threads per process and the launch line for such a setup would be:
 
 ```bash
-aprun -n 8 -N 4 -d 16 -cc depth $NAMDDIR/namd2 +ppn 15 +pemap 1-15,17-31,33-47,49-63 +commap 0,16,32,48 input.namd
+aprun -n 8 -N 4 -d 16 -cc depth $NAMD_DIR/namd2 +ppn 15 +pemap 1-15,17-31,33-47,49-63 +commap 0,16,32,48 input.namd
 ```
 
 The `aprun` options tell the Cray system how to distribute the processes and
@@ -57,13 +57,14 @@ The full KNL job submission script for such a setup would look like:
 #PBS -N namd_apoa1
 #PBS -l select=2:aoe=quad_100
 #PBS -l walltime=0:20:0
-#PBS -A k01-aturner
+# Change this to your KNL budget
+#PBS -A k01-user
 
 module swap PrgEnv-cray PrgEnv-intel
 module load rca
 module load craype-hugepages8M
-setenv HUGETLB_DEFAULT_PAGE_SIZE 8M
-setenv HUGETLB_MORECORE no
+export HUGETLB_DEFAULT_PAGE_SIZE 8M
+export HUGETLB_MORECORE no
 
 # Move to directory that script was submitted from
 export PBS_O_WORKDIR=$(readlink -f $PBS_O_WORKDIR)
@@ -72,7 +73,7 @@ cd $PBS_O_WORKDIR
 export NAMD_DIR=/work/knl-users/aturner/NAMD/NAMD_2.11_Source/CRAY-XC-intel
 
 # you should replace "input.namd" in the line below with your input filename
-aprun -n 8 -N 4 -d 16 -cc depth $NAMDDIR/namd2 +ppn 15 +pemap 1-15,17-31,33-47,49-63 +commap 0,16,32,48 input.namd
+aprun -n 8 -N 4 -d 16 -cc depth $NAMD_DIR/namd2 +ppn 15 +pemap 1-15,17-31,33-47,49-63 +commap 0,16,32,48 input.namd
 ```
 ### Example: 64 threads per process ###
 
