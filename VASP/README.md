@@ -13,7 +13,7 @@ Date | Person | Version | Notes
 Build Instructions
 ------------------
 
-* [VASP 5.4.1 ARCHER Ivy Bridge Build Instructions](build_vasp_5.4.1_ivybrg.md)
+* [VASP 5.4.1 ARCHER Ivy Bridge GCC Build Instructions](build_vasp_5.4.1_ivybrg.md)
 
 Notes
 -----
