@@ -1,5 +1,5 @@
-Instructions for compiling VASP 5.4.1 for ARCHER
-================================================
+Instructions for compiling VASP 5.4.1 for ARCHER using GCC compilers
+====================================================================
 
 These instructions are for compiling VASP 5.4.1 on ARCHER (Intel Ivy Bridge processors) using the GCC compilers.
 
