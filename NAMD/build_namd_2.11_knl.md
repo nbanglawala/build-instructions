@@ -5,8 +5,8 @@ These instructions are for compiling NAMD 2.11.0 on ARCHER KNL using the Intel c
 
 These instructions are based on those produced by the BlueWaters team: https://bluewaters.ncsa.illinois.edu/namd
 
-Download and unpack GCC
------------------------
+Download and unpack NAMD
+------------------------
 
 First download the NAMD source from: http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=NAMD
 and transfer to the ARCHER KNL system.
