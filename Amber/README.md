@@ -8,7 +8,7 @@ History
 
 Date | Person | Version | Notes
 ---- | -------|---------|------
-2016-12-22 | Andy Turner | 16, GCC 5, Ivy Bridge | Build instructions for ARCHER Ivy Bridge nodes using GCC 5 compilers
+2016-12-22 | Weronika Filinger | 16, GCC 5, Ivy Bridge | Build instructions for ARCHER Ivy Bridge nodes using GCC 5 compilers
 
 Build Instructions
 ------------------
