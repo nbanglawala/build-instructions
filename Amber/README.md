@@ -13,7 +13,7 @@ Date | Person | Version | Notes
 Build Instructions
 ------------------
 
-* [Amber 16 ARCHER Ivy Bridge GCC 5 Build Instructions](build_Amber_16_gcc5_ivybrg.md)
+* [Amber 16 ARCHER Ivy Bridge GCC 5 Build Instructions](build_Amber16_gcc5_ivybrg.md)
 
 Notes
 -----
