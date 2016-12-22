@@ -7,7 +7,7 @@ __Note:__ As this is a dynamic build you should install Amber in the
 `\work` file system on ARCHER so the required librarie s are available on 
 the compute nodes at runtime.
 
-__Note:__ The whoel build and install process should take a couple of 
+__Note:__ The whole build and install process should take a couple of 
 hours.
 
 Unpack the Amber source code
@@ -29,18 +29,19 @@ Unpack the source:
 cd Amber
 tar -xjvf Amber16.tar.bz2
 tar -xjvf AmberTools16.tar.bz2
-cd amber16
-export AMBERHOME=$PWD
 ```
 
 Compile Serial Version for PP nodes
 -----------------------------------
 
 Log into an ARCHER post processing node to build the serial code so it
-is compatible with the older processors:
+is compatible with the older processors and move to the correct 
+directory:
 
 ```bash
 ssh espp1
+cd /work/path/to/Amber/source/code
+export AMBERHOME=$PWD
 ```
 
 ### Setup correct modules and specify dynamic build ###
@@ -79,6 +80,13 @@ Compile Parallel Version for compute  nodes
 Make sure that you are on an ARCHER login node rather than a PP node (log
 out of the PP node if you are following on directly from the serial
 install above).
+
+Make sure you switch to the location of the Amber source code:
+
+```bash
+cd /work/path/to/Amber/source/code
+export AMBERHOME=$PWD
+```
 
 ### Setup correct modules and specify dynamic build ###
 
