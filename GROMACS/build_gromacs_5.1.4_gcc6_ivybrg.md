@@ -7,10 +7,10 @@ using the GCC 6 compilers.
 *Note:* GROMACS ust be built on the /work file system as it is a dynamic executable and has
 library files that will be required at runtime.
 
-Download and Unpack the CASTEP source code
-------------------------------------------
+Download and Unpack the GROMACS source code
+-------------------------------------------
 
-Unpack the source
+Download and unpack the source
 
 ```bash
 wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-5.1.4.tar.gz

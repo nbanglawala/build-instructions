@@ -4,10 +4,10 @@ Instructions for compiling serial GROMACS 5.1.4 for ARCHER using GCC 6 compilers
 These instructions are for compiling serial GROMACS 5.1.4 on ARCHER for the post-processing
 nodes (generic x86_64 processors) using the GCC 6 compilers.
 
-Download and Unpack the CASTEP source code
-------------------------------------------
+Download and Unpack the GROMACS source code
+-------------------------------------------
 
-Unpack the source
+Download and unpack the source
 
 ```bash
 wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-5.1.4.tar.gz
