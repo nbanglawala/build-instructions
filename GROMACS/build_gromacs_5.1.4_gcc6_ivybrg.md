@@ -63,7 +63,7 @@ cmake ../ -DGMX_MPI=ON -DGMX_OPENMP=ON -DGMX_GPU=OFF -DGMX_X11=OFF -DGMX_DOUBLE=
           -DCMAKE_C_FLAGS="$FLAGS" -DCMAKE_CXX_FLAGS="$FLAGS" -DGMX_BUILD_MDRUN_ONLY=ON  \
           -DFFTWF_INCLUDE_DIR=/opt/cray/fftw/3.3.4.9/ivybridge/include \
           -DCMAKE_INSTALL_PREFIX=/work/y07/y07/gmx/5.0.5-phase2
-make install
+make -j 8 install
 ```
 
 Configure and build the parallel, double-precision build
@@ -95,7 +95,7 @@ cmake ../ -DGMX_MPI=ON -DGMX_OPENMP=ON -DGMX_GPU=OFF -DGMX_X11=OFF -DGMX_DOUBLE=
           -DCMAKE_C_FLAGS="$FLAGS" -DCMAKE_CXX_FLAGS="$FLAGS" -DGMX_BUILD_MDRUN_ONLY=ON  \
           -DFFTWF_INCLUDE_DIR=/opt/cray/fftw/3.3.4.9/ivybridge/include \
           -DCMAKE_INSTALL_PREFIX=/work/y07/y07/gmx/5.4.1-phase2
-make install
+make -j 8 install
 ```
 
 
