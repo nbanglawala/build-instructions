@@ -75,8 +75,8 @@ cmake ../ -DGMX_MPI=OFF -DGMX_OPENMP=ON -DGMX_GPU=OFF -DGMX_X11=OFF -DGMX_DOUBLE
 make -j 8 install
 ```
 
-Configure and build the parallel, double-precision build
---------------------------------------------------------
+Configure and build the serial, double-precision build
+------------------------------------------------------
 
 Create a build directory in the source tree
 
