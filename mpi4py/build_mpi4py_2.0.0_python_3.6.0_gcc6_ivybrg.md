@@ -19,6 +19,7 @@ module swap PrgEnv-cray PrgEnv-gnu
 module swap gcc gcc/6.1.0 
 module swap cray-mpich cray-mpich/7.4.3 
 module load python-compute/3.6.0
+module unload xalt
 ```
 
 Edit `mpi.cfg` to add a section for ARCHER:
