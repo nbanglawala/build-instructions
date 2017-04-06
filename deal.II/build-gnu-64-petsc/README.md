@@ -9,9 +9,16 @@ optional packages:
 * PETSc
 * TBB
 
-The short version, just run master.sh, which simply sources the other
-scripts in turn:
-
+The short version:
+1. If you need to, download the
+ [source tarball](https://github.com/dealii/dealii/releases/download/v8.4.1/dealii-8.4.1.tar.gz)
+ and unpack it - make sure `$src_dir` in env.sh matches.
+1. If installing centrally, name your configuration by setting
+   `$config_name`. This one is called `gnu-petsc-64`.
+1. Make a build directory, making sure `$build_dir` in env.sh
+   matches. I used `build-$config_name`
+1. Copy these scripts into build
+1. Run master.sh, which simply sources the other scripts in turn.
 ```
 . env.sh
 . modules.sh

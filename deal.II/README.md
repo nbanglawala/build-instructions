@@ -14,7 +14,7 @@ shared linking and the following optional packages: HDF5; LAPACK; METIS; MPI; PE
 Build Instructions
 ------------------
 
-* [Gnu 64bit with PETSc](build-gnu-64-petsc.md)
+* [Gnu 64bit with PETSc](build-gnu-64-petsc)
 
 Notes
 -----
