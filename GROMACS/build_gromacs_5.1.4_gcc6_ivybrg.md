@@ -88,12 +88,13 @@ export FLAGS="-dynamic -O3 -ftree-vectorize -funroll-loops"
 ```
 
 Use CMake to configure the build and then build and install. Remember to set the install 
-prefix to somewhere you have permission to write to.
+prefix to somewhere you have permission to write to. Note the fftw include CMake option
+is -DFFTW_INCLUDE_DIR, not -DFFTWF_INCLUDE_DIR as for single precision.
 
 ```bash
 cmake ../ -DGMX_MPI=ON -DGMX_OPENMP=ON -DGMX_GPU=OFF -DGMX_X11=OFF -DGMX_DOUBLE=ON \
           -DCMAKE_C_FLAGS="$FLAGS" -DCMAKE_CXX_FLAGS="$FLAGS" -DGMX_BUILD_MDRUN_ONLY=ON  \
-          -DFFTWF_INCLUDE_DIR=/opt/cray/fftw/3.3.4.9/ivybridge/include \
+          -DFFTW_INCLUDE_DIR=/opt/cray/fftw/3.3.4.9/ivybridge/include \
           -DCMAKE_INSTALL_PREFIX=/work/y07/y07/gmx/5.1.4
 make -j 8 install
 ```
